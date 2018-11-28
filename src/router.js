@@ -53,6 +53,12 @@ export default new Router({
       name: 'register',
       component: () => import('./views/Register.vue')
     },
+     // 搜索
+     {
+      path: '/search',
+      name: 'search',
+      component: () => import('./views/Search.vue')
+    },
     // 全部订单
     {
       path: '/order',
