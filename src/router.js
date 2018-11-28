@@ -11,31 +11,34 @@ export default new Router({
     {
       path: '/',
       component: Index,
-      children:[
-          // 首页
-          {
-            path:'',
-            name:'index',
-            component: () => import('./views/Index/index.vue'),
-          },
-          // 分类
-          {
-            path:'/category',
-            name:'category',
-            component:() => import('./views/Index/category.vue'),
-          },
-          // 购物车
-          {
-            path:'/cart',
-            name:'cart',
-            component:() => import('./views/Index/cart.vue'),
-          },
-          // 个人中心
-          {
-            path:'/self',
-            name:'self',
-            component:()=>import('./views/Index/self.vue'),
+      children: [
+        // 首页
+        {
+          path: '',
+          name: 'index',
+          component: () => import('./views/Index/index.vue'),
+        },
+        // 分类
+        {
+          path: '/category',
+          name: 'category',
+          component: () => import('./views/Index/category.vue'),
+        },
+        // 购物车
+        {
+          path: '/cart',
+          name: 'cart',
+          component: () => import('./views/Index/cart.vue'),
+        },
+        // 个人中心
+        {
+          path: '/self',
+          name: 'self',
+          component: () => import('./views/Index/self.vue'),
+          meta: {
+            needLogin: true
           }
+        }
       ]
     },
     // 登录
@@ -46,81 +49,82 @@ export default new Router({
     },
     // 注册
     {
-      path:'/register',
-      name:'register',
-      component:()=>import('./views/Register.vue')
+      path: '/register',
+      name: 'register',
+      component: () => import('./views/Register.vue')
     },
-     // 全部订单
-     {
-      path:'/order',
-      name:'order',
-      component:()=>import('./views/Self/order.vue'),
+    // 全部订单
+    {
+      path: '/order',
+      name: 'order',
+      component: () => import('./views/Self/order.vue'),
     },
     // 待发货
     {
-      path:'/go_order',
-      name:'go_order',
-      component:()=>import('./views/Self/go_order'),
+      path: '/go_order',
+      name: 'go_order',
+      component: () => import('./views/Self/go_order'),
     },
     // 待评价
     {
-      path:'/go_message',
-      name:'go_message',
-      component:()=>import('./views/Self/go_message.vue'),
+      path: '/go_message',
+      name: 'go_message',
+      component: () => import('./views/Self/go_message.vue'),
     },
     // 商品详情页(退款后点击的页面)
     {
-      path:'/detail',
-      name:'detail',
-      component:()=>import('./views/Self/detail.vue'),
+      path: '/detail',
+      name: 'detail',
+      component: () => import('./views/Self/detail.vue'),
     },
     // 评价文本页面
     {
-      path:'/message',
-      name:'message',
-      component:()=>import('./views/Self/message.vue'),
+      path: '/message',
+      name: 'message',
+      component: () => import('./views/Self/message.vue'),
     },
     // 个人信息
     {
-      path:'/datum',
-      name:'datum',
-      component:()=>import('./views/Self/datum.vue'),
+      path: '/datum',
+      name: 'datum',
+      component: () => import('./views/Self/datum.vue'),
+
     },
     // 个人信息中的个人昵称
     {
-      path:'/namechange',
-      name:'namechange',
-      component:()=>import('./views/Self/namechange.vue'),
+      path: '/namechange',
+      name: 'namechange',
+      component: () => import('./views/Self/namechange.vue'),
     },
     // 我的收藏
     {
-      path:'/mycollect',
-      name:'mycollect',
-      component:()=>import('./views/Self/mycollect.vue'),
+      path: '/mycollect',
+      name: 'mycollect',
+      component: () => import('./views/Self/mycollect.vue'),
     },
     // 我的积分
     {
-      path:'/integral',
-      name:'integral',
-      component:()=>import('./views/Self/integral.vue'),
+      path: '/integral',
+      name: 'integral',
+      component: () => import('./views/Self/integral.vue'),
     },
     // 地址管理
     {
-      path:'/address',
-      name:'address',
-      component:()=>import('./views/Self/address.vue'),
+      path: '/address',
+      name: 'address',
+      component: () => import('./views/Self/address.vue'),
     },
     // 添加地址管理
     {
-      path:'/go_address',
-      name:'go_address',
-      component:()=>import('./views/Self/go_address.vue'),
+      path: '/go_address',
+      name: 'go_address',
+      component: () => import('./views/Self/go_address.vue'),
     },
     // 分销
     {
-      path:'/none',
-      name:'none',
-      component:()=>import('./views/Self/none.vue'),
+      path: '/none',
+      name: 'none',
+      component: () => import('./views/Self/none.vue'),
     }
 
   ]

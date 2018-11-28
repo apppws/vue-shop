@@ -45,7 +45,7 @@ export default {
   methods: {
     submit: function() {
       this.axios
-        .post("http://127.0.0.1:8000/api/members", this.from)
+        .post("/members", this.from)
         .then(res => {
           if (res.data.status_code == "200") {
             Dialog({

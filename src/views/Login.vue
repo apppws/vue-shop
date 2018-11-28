@@ -37,7 +37,7 @@ export default {
   methods: {
     submit: function() {
       this.axios
-        .post("http://127.0.0.1:8000/api/logins", {
+        .post("/logins", {
           username: this.username,
           password: this.password
         })
