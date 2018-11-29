@@ -13,8 +13,12 @@ Vue.use(VueAxios, axios)
 import WeVue from 'we-vue'
 Vue.use(WeVue)
 // 轮播图
-import { Swipe, SwipeItem } from 'we-vue'
+import { Swipe, SwipeItem ,Loadmore ,InfiniteScroll } from 'we-vue'
 Vue.use(Swipe).use(SwipeItem)
+// 加载更多
+Vue.use(Loadmore)
+// 无限滚动加载
+Vue.use(InfiniteScroll)
 
 // 注册导航守卫（每次加载一个页面时就会自动被执行）
 router.beforeEach((to, from, next) => {
