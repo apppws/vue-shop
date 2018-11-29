@@ -54,7 +54,7 @@
           infinite-scroll-distance="50"
         >
           <li class="pic" v-for="(v,k) in goods" :key="k">
-            <router-link :to="'/detail?id=' + v.id">
+            <router-link :to="'/goods?id=' + v.id">
               <img :src="v.logo">
               <p>{{ v.goods_name }}</p>
               <b>￥{{ v.skus[0].price }}</b>

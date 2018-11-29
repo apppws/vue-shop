@@ -79,9 +79,9 @@ export default new Router({
     },
     // 商品详情页(退款后点击的页面)
     {
-      path: '/detail',
-      name: 'detail',
-      component: () => import('./views/Self/detail.vue'),
+      path: '/goods',
+      name: 'goods',
+      component: () => import('./views/Self/goods.vue'),
     },
     // 评价文本页面
     {
