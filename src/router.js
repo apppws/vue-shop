@@ -131,6 +131,15 @@ export default new Router({
       path: '/none',
       name: 'none',
       component: () => import('./views/Self/none.vue'),
+    },
+    // 结算
+    {
+      path:'/buy',
+      name:'buy',
+      component:() => import('./views/buy.vue'),
+      meta: {
+        needLogin: true
+      }
     }
 
   ]

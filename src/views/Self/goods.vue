@@ -257,7 +257,7 @@ export default {
         }
       } else {
         //没有就放到数组中
-        cart.push({
+        cart.push({ 
           sku_id: skuid,
           buy_count: this.buyCount,
           checked: true //选中

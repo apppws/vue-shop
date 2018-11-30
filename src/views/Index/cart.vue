@@ -40,7 +40,9 @@
       <div class="shop-go">
         <b>合计：￥{{ totalInfo.price }}</b>
         <span>
+          <router-link to="buy">
           <a href="buy.html">去结算（{{ totalInfo.count }}）</a>
+          </router-link>
         </span>
       </div>
     </div>
